@@ -283,7 +283,7 @@ class Client:
         self.connect(self, reconnect=reconnect)
 
         
-    async def _connect(self, token: str = None, * reconnect: bool = True) -> None:
+    async def _connect(self, token: str = None, *, reconnect: bool = True) -> None:
         self.http.token = token or self.http.token
         if not self.http.token:
             raise ClientException("Token is missing.. Are you a bit lose in the head?")
