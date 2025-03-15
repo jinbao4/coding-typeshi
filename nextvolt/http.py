@@ -285,7 +285,7 @@ class HTTPClient:
         async with self.session.get(url) as resp:
             return await resp.read()
     
-        def fetch_user(self, user_id: str) -> Request[UserPayload]:
+      def fetch_user(self, user_id: str) -> Request[UserPayload]:
         return self.request("GET", f"/users/{user_id}")
 
     def fetch_profile(self, user_id: str) -> Request[UserProfile]:
